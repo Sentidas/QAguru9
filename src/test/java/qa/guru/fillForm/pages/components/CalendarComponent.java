@@ -1,13 +1,14 @@
-package qa.guru.pages.components;
+package qa.guru.fillForm.pages.components;
 
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
 
 public class CalendarComponent {
-    private SelenideElement dateInput = $("#dateOfBirthInput"),
+    private SelenideElement
+            dateInput = $("#dateOfBirthInput"),
             monthInput = $(".react-datepicker__month-select"),
-    yearInput = $(".react-datepicker__year-select");
+            yearInput = $(".react-datepicker__year-select");
 
     public void setDate(String day, String month, String year) {
         dateInput.click();

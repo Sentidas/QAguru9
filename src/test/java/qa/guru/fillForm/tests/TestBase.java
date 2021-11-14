@@ -1,8 +1,8 @@
-package qa.guru.tests;
+package qa.guru.fillForm.tests;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
-import qa.guru.pages.RegistrationPage;
+import qa.guru.fillForm.pages.RegistrationPage;
 
 public class TestBase {
 

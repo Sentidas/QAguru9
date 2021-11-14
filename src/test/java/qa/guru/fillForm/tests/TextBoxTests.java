@@ -1,4 +1,4 @@
-package qa.guru.tests;
+package qa.guru.fillForm.tests;
 
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
@@ -22,7 +22,7 @@ public class TextBoxTests extends TestBase {
 
         registrationPage.openPage();
         registrationPage.typeFirstName(firstName)
-                        .typeLastName(lastName);
+                .typeLastName(lastName);
 
         registrationPage.typeEmail("aaa@aa.aa");
         registrationPage.chooseAndClickGender("Female");
@@ -32,7 +32,7 @@ public class TextBoxTests extends TestBase {
 
         registrationPage.chooseAndClickSubject("History");
         registrationPage.chooseAndClickHobby("Reading");
-        registrationPage.uploadFile("111.jfif");
+        registrationPage.uploadFile("1.jfif");
         registrationPage.typeAddress(addressCity + " " + addressStreet);
         registrationPage.chooseAndClickState("NCR");
         registrationPage.chooseAndClickCity("Delhi");
@@ -50,6 +50,6 @@ public class TextBoxTests extends TestBase {
                 .checkResultsValue("Picture", "111.jfif")
                 .checkResultsValue("Address", addressCity + " " + addressStreet)
                 .checkResultsValue("State and City", "NCR Delhi");
-        
+
     }
 }
