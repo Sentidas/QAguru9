@@ -2,9 +2,7 @@ package qa.guru.fillForm.tests;
 
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
-
 import java.util.Locale;
-
 
 public class TextBoxTests extends TestBase {
 
@@ -15,7 +13,6 @@ public class TextBoxTests extends TestBase {
     String phoneNumber = faker.number().digits(10);
     String addressCity = faker.address().city();
     String addressStreet = faker.address().streetAddress();
-
 
     @Test
     void fillFormTest() {

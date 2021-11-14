@@ -6,8 +6,6 @@ import qa.guru.fillForm.pages.RegistrationPage;
 
 public class TestBase {
 
-
-
         RegistrationPage registrationPage = new RegistrationPage();
 
         @BeforeAll

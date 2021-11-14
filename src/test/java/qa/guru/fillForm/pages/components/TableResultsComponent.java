@@ -12,7 +12,6 @@ public class TableResultsComponent {
     private SelenideElement resultsTable = $(".table-responsive"),
                             titleTable = $("#example-modal-sizes-title-lg");
 
-
     public void checkTitle() {
         titleTable.shouldHave(text(FORM_TITLE));
 
