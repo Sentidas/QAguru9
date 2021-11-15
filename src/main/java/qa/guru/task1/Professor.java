@@ -1,25 +1,42 @@
 package qa.guru.task1;
 
 public class Professor {
-    String fullNameProfessor;
-    String countryOfProfessor;
-    int degreeOfProfessor;
-    int course;
 
+    private String fullNameProfessor;
+    private int course;
 
-    void teach(String course){
-        System.out.println("I'm a professor of . I teach of" + course);
+    public Professor(String fullNameProfessor, int course) {
+        this.fullNameProfessor = fullNameProfessor;
+        this.course = course;
     }
 
-    void info(String fullNameStudent, String countryStudent, String courseStudent) {
-        System.out.println("I'm a professor. Mi mane is + " + fullNameProfessor + ", from " +  countryOfProfessor + ".I teach: " + course);
+    public String getFullNameProfessor() {
+        return fullNameProfessor;
+    }
+
+    public void setFullNameProfessor(String fullNameProfessor) {
+        this.fullNameProfessor = fullNameProfessor;
+    }
+
+    public int getCourse() {
+        return course;
+    }
+
+    public void setCourse(int course) {
+        this.course = course;
+    }
+
+    void teach(String subject){
+        System.out.println("I'm a professor. I teach " + subject);
+    }
+
+    void printInfo() {
+        System.out.println("I'm a professor. Mi mane is " + fullNameProfessor + " .I teach on " + course + " course");
     }
 
     public void sleepInClass() {
         System.out.println("I'm a professor. I'm sleeping in my class");
     }
 
-    public int getDegree() {
-        return degreeOfProfessor;
-    }
+
 }

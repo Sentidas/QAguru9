@@ -2,10 +2,35 @@ package qa.guru.task1;
 
 public class EducationOrganization {
 
-    String nameOrganization;
-    String countryOfOrganization;
+    private String nameOrganization;
+    private String countryOfOrganization;
 
-    public void info(String nameOrganization, String countryOfOrganization) {
-        System.out.println("It's an education organization name is + " + nameOrganization + " and location in " +countryOfOrganization);
+    public EducationOrganization(String nameOrganization, String countryOfOrganization) {
+        this.nameOrganization = nameOrganization;
+        this.countryOfOrganization = countryOfOrganization;
+    }
+
+    public String getNameOrganization() {
+        return nameOrganization;
+    }
+
+    public void setNameOrganization(String nameOrganization) {
+        this.nameOrganization = nameOrganization;
+    }
+
+    public String getCountryOfOrganization() {
+        return countryOfOrganization;
+    }
+
+    public void setCountryOfOrganization(String countryOfOrganization) {
+        this.countryOfOrganization = countryOfOrganization;
+    }
+
+    public void printInfo() {
+        System.out.println("It's " + nameOrganization + " and it location in " +countryOfOrganization);
+    }
+
+    public static void printInfoOfEducation() {
+        System.out.println("Education it's very important");
     }
 }
