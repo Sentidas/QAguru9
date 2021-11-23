@@ -24,14 +24,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.openqa.selenium.By.partialLinkText;
 
-
 public class FileTest {
     @BeforeAll
     static void beforeAll() {
         Configuration.startMaximized = true;
     }
-
-    String href;
 
     @Test
     @DisplayName("Загрузка файла")
@@ -39,10 +36,9 @@ public class FileTest {
         open("https://transfiles.ru");
         $("input[type='file']").uploadFromClasspath("1.txt");
         $("#up_files").shouldHave(text("1.txt"));
-        href = $("#up_link a").scrollTo().getAttribute("href");
+        String href = $("#up_link a").scrollTo().getAttribute("href");
         System.out.println(href);
     }
-
 
     @Test
     @DisplayName("Скачивание текстового файла и проверка его содержимого")
@@ -95,12 +91,11 @@ public class FileTest {
         }
     }
 
-    int count = 0;
-
     @Test
     @DisplayName("Парсинг ZIP файлов")
     void parseZipFileTest() throws IOException, CsvException {
         ClassLoader classLoader = this.getClass().getClassLoader();
+        int count = 0;
         try (InputStream is = classLoader.getResourceAsStream("zima.zip");
              ZipInputStream zis = new ZipInputStream(is)) {
             ZipEntry entry;
