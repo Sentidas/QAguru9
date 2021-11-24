@@ -5,6 +5,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.xlstest.XLS;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.apache.commons.io.IOUtils;
@@ -57,6 +58,7 @@ public class FileTest {
     }
 
     @Test
+    @Feature("Download")
     @DisplayName("Скачивание PDF файла")
     void pdfFileDownloadTest() throws IOException {
         open("https://www.raiffeisen.ru/about/investors/annualreport/?active_tab=tab-1");
@@ -68,6 +70,7 @@ public class FileTest {
     }
 
     @Test
+    @Feature("Download")
     @DisplayName("Скачивание XLS файла")
     @Severity(SeverityLevel.CRITICAL)
     void xlsFileDownloadTest() throws IOException {
