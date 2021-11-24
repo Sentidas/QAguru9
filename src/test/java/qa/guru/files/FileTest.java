@@ -6,6 +6,7 @@ import com.codeborne.xlstest.XLS;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.apache.commons.io.IOUtils;
@@ -58,6 +59,7 @@ public class FileTest {
     }
 
     @Test
+    @Owner("BaharevaElena")
     @Feature("Download")
     @DisplayName("Скачивание PDF файла")
     void pdfFileDownloadTest() throws IOException {
@@ -70,6 +72,7 @@ public class FileTest {
     }
 
     @Test
+    @Owner("BaharevaElena")
     @Feature("Download")
     @DisplayName("Скачивание XLS файла")
     @Severity(SeverityLevel.CRITICAL)
