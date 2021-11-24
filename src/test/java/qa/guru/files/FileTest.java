@@ -5,6 +5,8 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.xlstest.XLS;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -67,6 +69,7 @@ public class FileTest {
 
     @Test
     @DisplayName("Скачивание XLS файла")
+    @Severity(SeverityLevel.CRITICAL)
     void xlsFileDownloadTest() throws IOException {
         open("https://optom-knigi.ru/index.php/katalog-i-prajs-listy/22-print");
         File file = $(byText("Амрита-Русь")).scrollTo().download();
@@ -80,6 +83,7 @@ public class FileTest {
 
     @Test
     @DisplayName("Парсинг CSV файлов")
+    @Severity(SeverityLevel.NORMAL)
     void parseCsvFileTest() throws IOException, CsvException {
         ClassLoader classLoader = this.getClass().getClassLoader();
         try (InputStream is = classLoader.getResourceAsStream("csv.csv");
