@@ -45,7 +45,7 @@ public class KinopoiskTest {
             "Трэвис Фиммел| Викинги"
     },
             delimiter = '|')
-    @ParameterizedTest(name = "Проверка фильма |{1}|  в информации об актере - |{0}|")
+    @ParameterizedTest(name = "Проверка фильма |{1}| в информации об актере - |{0}|")
     void searchFilmInInfoOfActor(String nameActor, String nameFilm) {
         open("https://kinopoisk.ru/");
         $("input[name='kp_query']").setValue(nameActor).pressEnter();
