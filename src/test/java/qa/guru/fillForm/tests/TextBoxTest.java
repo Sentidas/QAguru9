@@ -1,6 +1,7 @@
 package qa.guru.fillForm.tests;
 
 import com.github.javafaker.Faker;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.Locale;
@@ -15,6 +16,7 @@ public class TextBoxTest extends TestBase {
     String addressCity = faker.address().city();
     String addressStreet = faker.address().streetAddress();
 
+    @Disabled
     @Test
     void fillFormTest() {
 
