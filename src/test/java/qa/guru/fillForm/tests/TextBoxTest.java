@@ -2,9 +2,10 @@ package qa.guru.fillForm.tests;
 
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
+
 import java.util.Locale;
 
-public class TextBoxTests extends TestBase {
+public class TextBoxTest extends TestBase {
 
     Faker faker = new Faker(new Locale("ru"));
 
