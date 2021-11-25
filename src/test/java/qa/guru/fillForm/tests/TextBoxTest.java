@@ -1,12 +1,11 @@
 package qa.guru.fillForm.tests;
 
 import com.github.javafaker.Faker;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
 import java.util.Locale;
 
 public class TextBoxTests extends TestBase {
+
     Faker faker = new Faker(new Locale("ru"));
 
     String firstName = faker.name().firstName();
@@ -16,7 +15,6 @@ public class TextBoxTests extends TestBase {
     String addressStreet = faker.address().streetAddress();
 
     @Test
-    @Disabled("падает собака")
     void fillFormTest() {
 
         registrationPage.openPage();
@@ -49,5 +47,6 @@ public class TextBoxTests extends TestBase {
                 .checkResultsValue("Picture", "111.jfif")
                 .checkResultsValue("Address", addressCity + " " + addressStreet)
                 .checkResultsValue("State and City", "NCR Delhi");
+
     }
 }
