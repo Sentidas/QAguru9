@@ -17,6 +17,7 @@ public class RaiffaisenBankTest {
     @BeforeAll
     static void beforeAll() {
         Configuration.startMaximized = true;
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
     }
 
     @Owner("BaharevaElena")

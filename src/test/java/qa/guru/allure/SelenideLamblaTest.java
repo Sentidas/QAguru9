@@ -2,6 +2,7 @@ package qa.guru.allure;
 
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.*;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -16,7 +17,8 @@ public class SelenideLamblaTest {
 
     private static final String REPOSITORY = "eroshenkoam/allure-example";
     private static final Integer ISSUE_NUMBER = 68;
-  //  @Disabled
+
+    @Disabled
     @Test
     @Owner("BaharevaElena")
     @Feature("GitHub")
