@@ -3,6 +3,7 @@ package qa.guru.files;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.FileDownloadMode;
 import org.apache.commons.io.IOUtils;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -16,6 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class FIleProxyTest {
 
+    @Disabled
     @Test
     @DisplayName("Скачивание текстового файла и проверка его содержимого через прокси")
     void downloadSimpleTextFileTestWithProxy() throws IOException {

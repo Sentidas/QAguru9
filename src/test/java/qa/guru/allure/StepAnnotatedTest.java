@@ -1,6 +1,7 @@
 package qa.guru.allure;
 
 import io.qameta.allure.*;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import qa.guru.allure.steps.WebSteps;
@@ -12,7 +13,7 @@ public class StepAnnotatedTest {
 
     private final WebSteps steps = new WebSteps();
 
-
+    @Disabled
     @Test
     @Owner("BaharevaElena")
     @Feature("GitHub")

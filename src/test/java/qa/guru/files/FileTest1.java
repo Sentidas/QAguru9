@@ -6,6 +6,7 @@ import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -24,6 +25,7 @@ import static org.openqa.selenium.By.linkText;
 
 public class FileTest1 {
 
+    @Disabled
     @Test
     @DisplayName("Загрузка файла")
     void filenameShouldDisplayedAfterUploadActionFromClasspathTest() {
@@ -33,6 +35,7 @@ public class FileTest1 {
         $("#uploaded-qa.guru.files").shouldHave(text("example.txt"));
     }
 
+    @Disabled
     @Test
     @DisplayName("Скачивание текстового файла и проверка его содержимого")
     void downloadSimpleTextFileTest() throws IOException {
@@ -42,6 +45,7 @@ public class FileTest1 {
         assertTrue(fileContent.contains("This repository is the home of the next generation of JUnit, _JUnit 5_."));
     }
 
+    @Disabled
     @Test
     @DisplayName("Скачивание PDF файла")
     void pdfFileDownloadTest() throws IOException {
@@ -51,6 +55,7 @@ public class FileTest1 {
         Assertions.assertEquals(164, parsedPdf.numberOfPages);
     }
 
+    @Disabled
     @Test
     @DisplayName("Скачивание XLS файла")
     void xlsFileDownloadTest() throws IOException {
@@ -70,6 +75,7 @@ public class FileTest1 {
         assertTrue(checkPassed);
     }
 
+    @Disabled
     @Test
     @DisplayName("Парсинг CSV файлов")
     void parseCsvFileTest() throws IOException, CsvException {
@@ -83,6 +89,7 @@ public class FileTest1 {
         }
     }
 
+    @Disabled
     @Test
     @DisplayName("Парсинг ZIP файлов")
     void parseZipFileTest() throws IOException, CsvException {

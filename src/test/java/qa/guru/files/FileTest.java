@@ -6,10 +6,7 @@ import com.codeborne.xlstest.XLS;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
 import org.apache.commons.io.IOUtils;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.io.*;
 import java.util.List;
@@ -30,6 +27,7 @@ public class FileTest {
         Configuration.startMaximized = true;
     }
 
+    @Disabled
     @Test
     @DisplayName("Загрузка файла")
     void filenameShouldDisplayedAfterUploadActionFromClasspathTest() {
@@ -40,6 +38,7 @@ public class FileTest {
         System.out.println(href);
     }
 
+    @Disabled
     @Test
     @DisplayName("Скачивание текстового файла и проверка его содержимого")
     void downloadSimpleTextFileTest() throws IOException {
@@ -54,6 +53,7 @@ public class FileTest {
         assertTrue(fileContent.contains("This eBook is for the use of anyone anywhere"));
     }
 
+    @Disabled
     @Test
     @DisplayName("Скачивание PDF файла")
     void pdfFileDownloadTest() throws IOException {
@@ -65,6 +65,7 @@ public class FileTest {
         Assertions.assertEquals("Презентация PowerPoint", parsedPdf.title);
     }
 
+    @Disabled
     @Test
     @DisplayName("Скачивание XLS файла")
     void xlsFileDownloadTest() throws IOException {
@@ -78,6 +79,7 @@ public class FileTest {
         assertTrue(checkPassed);
     }
 
+    @Disabled
     @Test
     @DisplayName("Парсинг CSV файлов")
     void parseCsvFileTest() throws IOException, CsvException {
@@ -91,6 +93,7 @@ public class FileTest {
         }
     }
 
+    @Disabled
     @Test
     @DisplayName("Парсинг ZIP файлов")
     void parseZipFileTest() throws IOException, CsvException {

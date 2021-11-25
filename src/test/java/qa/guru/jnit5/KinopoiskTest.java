@@ -24,7 +24,6 @@ public class KinopoiskTest {
         Configuration.startMaximized = true;
     }
 
-
     @Owner("BaharevaElena")
     @Story("Поиск cериала по названию")
     @Severity(SeverityLevel.BLOCKER)

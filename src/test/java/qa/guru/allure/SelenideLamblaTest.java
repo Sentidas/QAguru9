@@ -16,7 +16,7 @@ public class SelenideLamblaTest {
 
     private static final String REPOSITORY = "eroshenkoam/allure-example";
     private static final Integer ISSUE_NUMBER = 68;
-
+  //  @Disabled
     @Test
     @Owner("BaharevaElena")
     @Feature("GitHub")
