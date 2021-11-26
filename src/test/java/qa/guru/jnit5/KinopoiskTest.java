@@ -3,6 +3,7 @@ package qa.guru.jnit5;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import io.qameta.allure.*;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -10,6 +11,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import qa.guru.helpers.Attach;
 
 import java.util.stream.Stream;
 
@@ -77,5 +79,13 @@ public class KinopoiskTest {
         $("input[name='kp_query']").setValue(nameActor).pressEnter();
         $("div h1").shouldHave(Condition.text(nameActor));
         $(".styles_panel__14Dgg").shouldHave(Condition.text(nameFilm));
+    }
+
+    @AfterEach
+    public void tearDown() {
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
     }
 }

@@ -3,10 +3,12 @@ package qa.guru.jnit5;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import io.qameta.allure.*;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import qa.guru.helpers.Attach;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -37,5 +39,13 @@ public class RaiffaisenBankTest {
         $("input[name='search-place']").setValue("метро " + value).pressEnter();
         $(".e-office-item__subway").shouldHave(Condition.text(String.valueOf(value)));
 
+    }
+
+    @AfterEach
+    public void tearDown() {
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
     }
 }
