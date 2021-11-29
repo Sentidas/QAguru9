@@ -33,5 +33,4 @@ public class EducationOrganization {
 //    public void setCountryOfOrganization(String countryOfOrganization) {
 //        this.countryOfOrganization = countryOfOrganization;
 //    }
-
 }
