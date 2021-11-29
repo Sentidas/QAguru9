@@ -14,17 +14,6 @@ public class Professor {
         return fullNameProfessor;
     }
 
-    public void setFullNameProfessor(String fullNameProfessor) {
-        this.fullNameProfessor = fullNameProfessor;
-    }
-
-    public int getCourse() {
-        return course;
-    }
-
-    public void setCourse(int course) {
-        this.course = course;
-    }
 
     void teach(String subject){
         System.out.println("I'm a professor. I teach " + subject);
@@ -38,5 +27,16 @@ public class Professor {
         System.out.println("I'm a professor. I'm sleeping in my class");
     }
 
+//        public void setFullNameProfessor(String fullNameProfessor) {
+//        this.fullNameProfessor = fullNameProfessor;
+//    }
+//
+//    public int getCourse() {
+//        return course;
+//    }
+//
+//    public void setCourse(int course) {
+//        this.course = course;
+//    }
 
 }
