@@ -11,13 +11,13 @@ public class Student {
         this.idCardStudent = idCardStudent;
     }
 
-    public String getFullNameStudent() {
-        return fullNameStudent;
-    }
+//    public String getFullNameStudent() {
+//        return fullNameStudent;
+//    }
 
-    public void setFullNameStudent(String fullNameStudent) {
-        this.fullNameStudent = fullNameStudent;
-    }
+//    public void setFullNameStudent(String fullNameStudent) {
+//        this.fullNameStudent = fullNameStudent;
+//    }
 
     public void study(){
         System.out.println("I'm a student. I'm studying.");
@@ -45,17 +45,18 @@ public class Student {
             return course;
         }
 
-        public void setCourse(String course) {
-            this.course = course;
-        }
+//        public void setCourse(String course) {
+//            this.course = course;
+//        }
 
-        public int getNumberOfCourse() {
-            return numberOfCourse;
-        }
+//        public int getNumberOfCourse() {
+//            return numberOfCourse;
+//        }
 
-        public void setNumberOfCourse(int numberOfCourse) {
-            this.numberOfCourse = numberOfCourse;
-        }
+//        public void setNumberOfCourse(int numberOfCourse) {
+//            this.numberOfCourse = numberOfCourse;
+//        }
+
     }
 
 }

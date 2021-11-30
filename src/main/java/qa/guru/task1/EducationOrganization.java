@@ -14,18 +14,6 @@ public class EducationOrganization {
         return nameOrganization;
     }
 
-    public void setNameOrganization(String nameOrganization) {
-        this.nameOrganization = nameOrganization;
-    }
-
-    public String getCountryOfOrganization() {
-        return countryOfOrganization;
-    }
-
-    public void setCountryOfOrganization(String countryOfOrganization) {
-        this.countryOfOrganization = countryOfOrganization;
-    }
-
     public void printInfo() {
         System.out.println("It's " + nameOrganization + " and it location in " +countryOfOrganization);
     }
@@ -33,4 +21,17 @@ public class EducationOrganization {
     public static void printInfoOfEducation() {
         System.out.println("Education it's very important");
     }
+
+//        public void setNameOrganization(String nameOrganization) {
+//        this.nameOrganization = nameOrganization;
+//    }
+//
+//    public String getCountryOfOrganization() {
+//        return countryOfOrganization;
+//    }
+//
+//    public void setCountryOfOrganization(String countryOfOrganization) {
+//        this.countryOfOrganization = countryOfOrganization;
+//    }
+
 }
